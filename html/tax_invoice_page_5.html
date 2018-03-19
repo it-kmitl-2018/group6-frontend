@@ -5,18 +5,21 @@
   </head>
   <body>
     <div style="padding:10px; border: 1px solid #eeeeee; background-color: #FFFFF0;">
-      <form name="exchanged_document" method="post" action="exchanged_document.php"><h2 style="display: inline">ใบกำกับภาษี</h2><br>
+      <form name="exchanged_document" method="post" action="exchanged_document.php"><h1 style="display: inline">ใบกำกับภาษี</h1><br>
         <table border="0" cellspacing="0px"  style="width: 500px">
           <tbody>
             <br>
             <tr>
-              <td>  
-                <h4 style="display: inline">ข้อมูลการชำระเงินทางการค้า</h4>
+              <td> 
+                <h3 style="display: inline">ข้อมูลการชำระเงินทางการค้า</h3>
               </td>
             </tr>
             <tr>
-              <td>&nbsp;รหัสสกุลเงินตรา</td>
               <td>
+                <br>
+                &nbsp;รหัสสกุลเงินตรา</td>
+              <td>
+                <br>
                 <input name="invoice_currency_code" type="text" id="invoice_currency_code">
               </td>
             </tr>
@@ -110,20 +113,10 @@
                 <input name="total_allowance_amount" type="number" id="total_allowance_amount">
               </td>
             </tr>
+
             <tr>
-              <td>&nbsp;จำนวนภาษีมูลค่าเพิ่ม</td>
-              <td>
-                <input name="tax_total_amount" type="number" id="tax_total_amount">
-              </td>
-              </tr>
-            <tr>
-              <td>&nbsp;ยอดเงินรวม/ยอดเงินรวมภาษีมูลค่าเพิ่ม</td>
-              <td>
-                <input name="grand_total_amount" type="number" id="grand_total_amount">
-              </td>
-            </tr>
-            <tr>
-            <td>  </td>
+            <td> </td>
+            <td> </td>
               <td>  
                 <input type="submit" name="button_next" value="หน้าถัดไป">
               </td>
