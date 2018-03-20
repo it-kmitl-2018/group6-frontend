@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>ใบกำกับภาษี</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div style="padding:10px; border: 1px solid #eeeeee; background-color: #FFFFF0;">
+      <form name="exchanged_document" method="post" action="exchanged_document.php"><h1 style="display: inline">ใบกำกับภาษี</h1><br>
+        <table border="0" cellspacing="0px"  style="width: 500px">
+          <tbody>
+            <br>
+            <tr>
+              <td> 
+                <h2 style="display: inline">ข้อมูลรายการทางการค้า</h2>
+              </td>
+            </tr>
+            <tr>
+                <td> 
+                  <br> 
+                  <h3 style="display: inline">ข้อมูลระบุรายการซื้อขาย</h3>
+                </td>
+              </tr>
+            <tr>
+              <td>
+                <br>
+                &nbsp;ลำดับรายการ</td>
+              <td>
+                <br>
+                <input name="line_id" type="text" maxlength="35" id="invoice_currency_code">
+              </td>
+            </tr>
+            <tr>
+              <td> 
+                <br> 
+                <h3 style="display: inline">ข้อตกลงทางการค้า</h3>
+              </td>
+            </tr>
+            <tr>
+              <td> 
+                <br> 
+                <h4 style="display: inline">ข้อมูลจำนวนเงินสินค้าต่อหน่วย</h4>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;ราคาต่อหน่วย</td>
+              <td>
+                <input name="tax_type_code" type="number" id="tax_type_code">
+              </td>
+            </tr>
+            <tr>
+              <td>  
+                <br>
+                <h5 style="display: inline">ข้อมูลส่วนลดหรือค่าธรรมเนียม (ต่อหน่วย)</h5>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;ตัวบอกส่วนลดหรือค่าธรรมเนียม (ต่อหน่วย)</td>
+              <td>
+                <input name="charge_indicator_fee_per_unit" type="checkbox" value="yes" id="charge_indicator_fee_per_unit">
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;มูลค่าส่วนลดหรือค่าธรรมเนียม (ต่อหน่วย)</td>
+              <td>
+                <input name="actual_amount_fee_per_unit" type="number" id="actual_amount_fee_per_unit">
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;รหัสประเภทส่วนลดหรือค่าธรรมเนียม (ต่อหน่วย)</td>
+              <td>
+                <input name="type_code_fee_per_unit" type="text" id="type_code_fee_per_unit">
+              </td>
+            </tr>
+            <tr>
+                <td>  
+                  <br>
+                  <h3 style="display: inline">ข้อมูลการจัดส่งทางการค้า</h3>
+                </td>
+              </tr>
+            <tr>
+              <td>&nbsp;จํานวนสินค้า @ หน่วยวัด</td>
+              <td>
+                <input name="billed_quantity_amount" type="number" id="billed_quantity_amount">
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;ขนาดบรรจุต่อหน่วยขาย @ หน่วยวัด</td>
+              <td>
+                <input name="per_package_unit_quantity" type="number" id="per_package_unit_quantity">
+              </td>
+            </tr>
+            <tr>
+              <td> 
+                <br> 
+                <h3 style="display: inline">ข้อมูลการชําระเงินทางการค้า</h3>
+              </td>
+            </tr>
+            <tr>
+              <td> 
+                <br> 
+                <h4 style="display: inline">ข้อมูลภาษี</h4>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;รหัสประเภทภาษี</td>
+              <td>
+                <input name="tax_type_code_trade_settlement" type="text" id="tax_type_code_trade_settlement">
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;อัตราภาษี</td>
+              <td>
+                <input name="tax_calculated_rate_trade_settlement" type="number" id="tax_calculated_rate_trade_settlement">
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;มูลค่าสินค้า/บริการ</td>
+              <td>
+                <input name="basis_amount_trade_settlement" type="number" id="basis_amount_trade_settlement">
+              </td>
+            </tr>
+            <tr>
+            <td> </td>
+              <td>  
+                <input type="submit" name="button_next" value="หน้าถัดไป">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
