@@ -1,11 +1,8 @@
-<html>
-  <head>
-    <title>ใบกำกับภาษี</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  </head>
-  <body>
+<template>
+  <div class="invoice">
+    <h1>{{ title }}</h1>
     <div style="padding:10px; border: 1px solid #eeeeee; background-color: #FFFFF0;">
-      <form name="exchanged_document" method="post" action="tax_invoice_page_2.html"><h2 style="display: inline">ใบกำกับภาษี</h2><br>
+    <form name="exchanged_document" method="post" action="tax_invoice_page_2.html"><h2 style="display: inline">ใบกำกับภาษี</h2><br>
         <table border="0" cellspacing="0px"  style="width: 500px">
           <tbody>
             <tr>
@@ -152,7 +149,6 @@
                       <option value="65">Unsettled dispute</option>
                   </select>
               </td>
-              </td>
             </tr>
             <tr>
               <td>&nbsp;เลขที่เอกสารสากล</td>
@@ -195,6 +191,17 @@
           </tbody>
         </table>
       </form>
-    </div>
-  </body>
-</html>
+  </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'invoice',
+  data () {
+    return {
+      title : 'ใบกำกับภาษี'
+    }
+  }
+}
+</script>
