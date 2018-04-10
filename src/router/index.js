@@ -5,9 +5,9 @@ import paymentInformation from '@/components/Payment Information'
 Vue.use(Router)
 
 export default new Router({
-    routes: [{
-        path: '/',
-        name: 'paymentInformation',
-        component: paymentInformation
-    }]
+  routes: [{
+    path: '/',
+    name: 'paymentInformation',
+    component: paymentInformation
+  }]
 })
