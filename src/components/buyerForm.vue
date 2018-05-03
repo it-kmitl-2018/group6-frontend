@@ -30,7 +30,7 @@
 </template> 
  
 <script> 
-export default { 
-    props: ["buyer"] 
-}; 
-</script> 
+export default {
+    props: ["buyer"]
+};
+</script>
