@@ -29,6 +29,6 @@
 
 <script>
 export default {
-    props: ["buyerFormVue"]
+  props: ['buyerFormVue']
 }
 </script>

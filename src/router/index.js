@@ -6,13 +6,13 @@ import buyerForm from '@/components/buyerForm'
 Vue.use(Router)
 
 export default new Router({
-    routes: [{
-        path: '/payment Information',
-        name: 'paymentInformation',
-        component: paymentInformation
-    }, {
-        path: '/buyerForm',
-        name: 'buyerForm',
-        component: buyerForm
-    }]
+  routes: [{
+    path: '/payment Information',
+    name: 'paymentInformation',
+    component: paymentInformation
+  }, {
+    path: '/buyerForm',
+    name: 'buyerForm',
+    component: buyerForm
+  }]
 })
