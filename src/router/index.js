@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import invoice from '@/components/ExchangeDocumentForm.vue'
+import invoice from '@/components/invoice'
 
 Vue.use(Router)
 
