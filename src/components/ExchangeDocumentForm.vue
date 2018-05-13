@@ -1,6 +1,5 @@
 <template>
   <div class="exchangeDocumentForm">
-    <h1>{{ title }}</h1>
     <div style="padding:10px; border: 1px solid #eeeeee; background-color: #FFFFF0;">
       <h2 style="display: inline">ใบกำกับภาษี</h2><br>
       <table border="0" cellspacing="0px"  style="width: 600px">
@@ -13,7 +12,7 @@
           <tr>
             <td>&nbsp;รหัสคู่มือมาตรฐาน</td>
             <td>
-              <input type="text" maxlength="35" v-model.lazy="disc.id_guideline">
+              <input type="text" maxlength="35" v-model.lazy="exchangeDocumentFormProp.id_guideline">
             </td>
           </tr>
 
@@ -25,13 +24,13 @@
           <tr>
             <td>&nbsp;เลขที่เอกสาร</td>
             <td>
-              <input type="text" maxlength="35" v-model.lazy="disc.id_document">
+              <input type="text" maxlength="35" v-model.lazy="exchangeDocumentFormProp.header.id_document">
             </td>
           </tr>
           <tr>
             <td>&nbsp;ชื่อเอกสาร</td>
             <td>
-              <select v-model.lazy="disc.name_document">
+              <select v-model.lazy="exchangeDocumentFormProp.header.name_document">
                 <option value="80">Debit note related to goods or services</option>
                 <option value="81">Credit note related to goods or services</option>
                 <option value="82">Metered services invoice</option>
@@ -55,25 +54,25 @@
           <tr>
             <td>&nbsp;รหัสประเภทเอกสาร</td>
             <td>
-              <input type="text" v-model.lazy="disc.type_code_document">
+              <input type="text" v-model.lazy="exchangeDocumentFormProp.header.type_code_document">
             </td>
           </tr>
           <tr>
             <td>&nbsp;วันเดือนปี ที่ออกเอกสาร</td>
             <td>
-              <input type="date" v-model.lazy="disc.issue_date_time_document">
+              <input type="date" v-model.lazy="exchangeDocumentFormProp.header.issue_date_time_document">
             </td>
           </tr>
           <tr>
             <td>&nbsp;สาเหตุการออกเอกสาร</td>
             <td>
-              <input type="text" maxlength="35" v-model.lazy="disc.purpose_document">
+              <input type="text" maxlength="35" v-model.lazy="exchangeDocumentFormProp.header.purpose_document">
             </td>
           </tr>
           <tr>
             <td>&nbsp;รหัสสาเหตุการออกเอกสาร</td>
             <td>
-              <select v-model.lazy="disc.purpose_code_document">
+              <select v-model.lazy="exchangeDocumentFormProp.header.purpose_code_document">
                 <option value="1">Cancellation</option>
                 <option value="2">Addition</option>
                 <option value="3">Deletion</option>
@@ -151,13 +150,13 @@
           <tr>
             <td>&nbsp;เลขที่เอกสารสากล</td>
             <td>
-              <input type="text" maxlength="35" v-model.lazy="disc.global_id_document">
+              <input type="text" maxlength="35" v-model.lazy="exchangeDocumentFormProp.header.global_id_document">
             </td>
           </tr>
           <tr>
             <td>&nbsp;วันเดือนปีและเวลาที่สร้างเอกสาร</td>
             <td>
-              <input type="date" v-model.lazy="disc.creation_date_time_document">
+              <input type="date" v-model.lazy="exchangeDocumentFormProp.header.creation_date_time_document">
             </td>
           </tr>
 
@@ -169,7 +168,7 @@
           <tr>
             <td>&nbsp;หมายเหตุ</td>
             <td>
-              <textarea type="text" maxlength="500" v-model.lazy="disc.remark_include_note"></textarea>
+              <textarea type="text" maxlength="500" v-model.lazy="exchangeDocumentFormProp.header.remark_include_note"></textarea>
             </td>
           </tr>
 
@@ -186,17 +185,7 @@
 
 <script>
 export default {
-  props: ['exchangeDocumentFormProp']
   name: 'exchangeDocumentForm',
-  data () {
-    return{
-      title: 'ใบกำกับภาษี',
-      }
-    },
-    methods: {
-      submit: function(){
-        console.log(this.disc);
-      }
-    }
-  }
+  props: ['exchangeDocumentFormProp'],
+}
 </script>
