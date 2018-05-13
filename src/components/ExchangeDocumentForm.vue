@@ -1,5 +1,5 @@
 <template>
-  <div class="invoice">
+  <div class="exchangeDocumentForm">
     <h1>{{ title }}</h1>
     <div style="padding:10px; border: 1px solid #eeeeee; background-color: #FFFFF0;">
         <h2 style="display: inline">ใบกำกับภาษี</h2><br>
@@ -13,7 +13,7 @@
                 <tr>
                     <td>&nbsp;รหัสคู่มือมาตรฐาน</td>
                     <td>
-                        <input type="text" maxlength="35" v-model="disc.id_guideline">
+                        <input type="text" maxlength="35" v-model.lazy="disc.id_guideline">
                     </td>
                 </tr>
 
@@ -167,15 +167,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;หัวข้อ</td>
+                    <td>&nbsp;หมายเหตุ</td>
                     <td>
-                        <textarea type="text" maxlength="500" v-model.lazy="disc.subject_include_note"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;เนื้อหา</td>
-                    <td>
-                        <textarea type="text" maxlength="500" v-model.lazy="disc.content_include_note"></textarea>
+                        <textarea type="text" maxlength="500" v-model.lazy="disc.remark_include_note"></textarea>
                     </td>
                 </tr>
 
@@ -192,23 +186,11 @@
 
 <script>
     export default {
-        name: 'invoice',
+        props: ['exchangeDocumentFormProp']
+        name: 'exchangeDocumentForm',
         data () {
             return{
                 title: 'ใบกำกับภาษี',
-                disc: {
-                    id_guideline: '',
-                    id_document: '',
-                    name_document: '',
-                    type_code_document: '',
-                    issue_date_time_document: '',
-                    purpose_document: '',
-                    purpose_code_document: '',
-                    global_id_document: '',
-                    creation_date_time_document: '',
-                    subject_include_note: '',
-                    content_include_note: ''
-                }
             }
         },
         methods: {
