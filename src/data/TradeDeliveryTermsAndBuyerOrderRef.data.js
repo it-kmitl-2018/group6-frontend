@@ -5,7 +5,7 @@ export default{
             id: '',
             created_date: '',
             reference_type_coder: ''
-                         },
+        },
         additional_reference: {
             id: '',
             created_date: '',
