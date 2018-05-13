@@ -27,6 +27,6 @@
 
 <script>
 export default {
-  props: ['supplyChainDeliveryVue']
+  props: ['supplyChainDeliveryReceiverVue']
 }
 </script>
