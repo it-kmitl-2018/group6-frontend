@@ -80,15 +80,6 @@
         data () {
             return{
                 title: 'ใบกำกับภาษี',
-                disc: {
-                    delivery_type_code: '',
-                    issuer_assigned_id_buyer_order: '',
-                    issuer_date_time_buyer_order: '',
-                    reference_type_code_buyer_order: '',
-                    issuer_assigned_id_additional: '',
-                    issuer_date_time_additional: '',
-                    reference_type_code_additional: ''
-                }
             }
         },
         methods: {
