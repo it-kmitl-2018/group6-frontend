@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import invoice from '@/components/invoice'
+import paymentInformation from '@/components/Payment Information'
+import buyerForm from '@/components/buyerForm'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'invoice',
-      component: invoice
-    }
-  ]
+  routes: [{
+    path: '/payment Information',
+    name: 'paymentInformation',
+    component: paymentInformation
+  }, {
+    path: '/buyerForm',
+    name: 'buyerForm',
+    component: buyerForm
+  }]
 })
