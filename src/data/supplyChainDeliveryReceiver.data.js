@@ -22,7 +22,6 @@ export default {
           building_number: ''
         }
       }
-
     }
   }
 }
