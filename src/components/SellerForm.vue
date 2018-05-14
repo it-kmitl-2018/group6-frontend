@@ -12,7 +12,7 @@
           <tr>
             <td>&nbsp;รหัสผู้ค้า (ผู้ขาย) </td>
             <td>
-              <input type="text" maxlength="35" v-model.lazy="sellerFormProp.id">
+              <input type="text" maxlength="35" v-model.lazy="sellerFormProp.dealer_id">
             </td>
           </tr>
           <tr>
@@ -35,7 +35,7 @@
           <tr>
             <td>&nbsp;เลขประจาตัวผู้เสียภาษีอากร (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="35" v-model.lazy="sellerFormProp.id_specified">
+              <input type="text" maxlength="35" v-model.lazy="sellerFormProp.tax_payer_id">
             </td>
           </tr>
 
@@ -47,13 +47,13 @@
           <tr>
             <td>&nbsp;URI (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="256" v-model.lazy="sellerFormProp.uri_id_email">
+              <input type="text" maxlength="256" v-model.lazy="sellerFormProp.uri">
             </td>
           </tr>
           <tr>
             <td>&nbsp;อีเมล (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="2048" v-model.lazy="sellerFormProp.complete_number_email">
+              <input type="text" maxlength="2048" v-model.lazy="sellerFormProp.email">
             </td>
           </tr>
 
@@ -65,67 +65,67 @@
           <tr>
             <td>&nbsp;รหัสไปรษณีย์ (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="16" v-model.lazy="sellerFormProp.post_code_address">
+              <input type="text" maxlength="16" v-model.lazy="sellerFormProp.address.postal_code">
             </td>
           </tr>
           <tr>
             <td>&nbsp;ชื่ออาอาคาร (ผู้ขาย)</td>
             <td>
-               <input type="text" maxlength="70" v-model.lazy="sellerFormProp.building_name_trade_address">
+               <input type="text" maxlength="70" v-model.lazy="sellerFormProp.address.building_name">
             </td>
           </tr>
           <tr>
             <td>&nbsp;ซอย (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.line_3_trade_address">
+              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.address.lane">
             </td>
           </tr>
           <tr>
             <td>&nbsp;หมู่บ้าน (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.line_4_trade_address">
+              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.address.village_name">
             </td>
           </tr>
           <tr>
             <td>&nbsp;หมู่ที่ (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.line_5_trade_address">
+              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.address.village_number">
             </td>
           </tr>
           <tr>
             <td>&nbsp;ถนน (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.street_name_trade_address">
+              <input type="text" maxlength="70" v-model.lazy="sellerFormProp.address.street_name">
             </td>
           </tr>
           <tr>
             <td>&nbsp;รหัสอำเภอ (ผู้ขาย)</td>
             <td>
-              <input type="text" v-model.lazy="sellerFormProp.city_name_trade_address">
+              <input type="text" v-model.lazy="sellerFormProp.address.district_code">
             </td>
           </tr>
           <tr>
             <td>&nbsp;รหัสตำบล (ผู้ขาย)</td>
             <td>
-              <input type="text" v-model.lazy="sellerFormProp.city_sub_divition_name_trade_address">
+              <input type="text" v-model.lazy="sellerFormProp.address.sub_district_code">
             </td>
           </tr>
           <tr>
             <td>&nbsp;รหัสประเทศ (ผู้ขาย)</td>
             <td>
-              <input type="text" v-model.lazy="sellerFormProp.country_id_trade_address">
+              <input type="text" v-model.lazy="sellerFormProp.address.country_code">
             </td>
           </tr>
           <tr>
             <td>&nbsp;รหัสจังหวัด (ผู้ขาย)</td>
             <td>
-              <input type="text" v-model.lazy="sellerFormProp.country_sub_divition_id_trade_address">
+              <input type="text" v-model.lazy="sellerFormProp.address.country_sub_division_code">
             </td>
           </tr>
           <tr>
             <td>&nbsp;บ้านเลขที่ (ผู้ขาย)</td>
             <td>
-              <input type="text" maxlength="16" v-model.lazy="sellerFormProp.building_number_trade_address">
+              <input type="text" maxlength="16" v-model.lazy="sellerFormProp.address.building_number">
             </td>
           </tr>
 

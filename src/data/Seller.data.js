@@ -1,21 +1,23 @@
 export default{
   data: {
-    id: '',
+    dealer_id: '',
     global_id: '',
     name: '',
-    id_specified: '',
-    uri_id_email: '',
-    complete_number_email: '',
-    post_code_address_seller: '',
-    building_name_trade_address: '',
-    line_3_trade_address: '',
-    line_4_trade_address: '',
-    line_5_trade_address: '',
-    street_name_trade_address: '',
-    city_name_trade_address: '',
-    city_sub_divition_name_trade_address: '',
-    country_id_trade_address: '',
-    country_sub_divition_id_trade_address: '',
-    building_number_trade_address: ''
+    tax_payer_id: '',
+    uri: '',
+    email: '',
+    address: {
+      postal_code: '',
+      building_name: '',
+      lane: '',
+      village_name: '',
+      village_number: '',
+      street_name: '',
+      district_code: '',
+      sub_district_code: '',
+      country_code: '',
+      country_sub_division_code: '',
+      building_number: ''
+    }
   }
 }
