@@ -1,19 +1,10 @@
 <template>
   <div class="taxInvoice">
-    <h1>{{ title_invoice }}</h1>
-    <b-card no-body>
-      <b-tabs pills card vertical>
-        <b-tab title="หัวเรื่องเอกสาร">
-          <exchange-document-form :exchangeDocumentFormProp="guideline_id"></exchange-document-form>
-        </b-tab>
-        <b-tab title="ผู้ขาย">
-          <seller-form :sellerFormProp="trade_agreement.seller"></seller-form>
-        </b-tab>
-        <b-tab title="เงื่อนไขกำรซื้อขาย และเอกสารใบสั่งซื้ออ้างอิง">
-          <trade-form :tradeDeiveryTermsAndBuyerOrderRefFormProp="trade_agreement.trade"></trade-form>
-        </b-tab>
-      </b-tabs>
-    </b-card>
+    <h1>ใบกำกับภาษี</h1>
+      <exchange-document-form :exchangeDocumentFormProp="guideline_id"></exchange-document-form>
+      <seller-form :sellerFormProp="trade_agreement.seller"></seller-form>
+      <trade-form :tradeDeiveryTermsAndBuyerOrderRefFormProp="trade_agreement.trade"></trade-form>
+
   </div>
 </template>
 
@@ -26,8 +17,7 @@ import TradeDeliveryTermsAndBuyerOrderRefForm from '@/components/TradeDeliveryTe
 import TradeDeliveryTermsAndBuyerOrderRefData from '@/data/TradeDeliveryTermsAndBuyerOrderRef.data.js'
 
 export default {
- name: 'taxInvoice',
- title_invoice: 'ใบกำกับภาษี',
+  name: 'taxInvoice',
   data () {
     return {
       guideline_id: ExchangeDocumentData.data,
@@ -43,8 +33,8 @@ export default {
     TradeDeliveryTermsAndBuyerOrderRefForm
   },
   methods: {
-    submit: function(){
-      console.log(this.data);
+    submit: function () {
+      console.log(this.data)
     }
   }
 }
