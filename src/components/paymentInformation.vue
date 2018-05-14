@@ -4,7 +4,7 @@
     <h2 style="display: inline"> ข้อมูลการชำระเงินทางการค้า </h2>
     <br>
     <br> &nbsp;รหัสสกุลเงินตรา :
-    <select name="invoice_currency_code">
+    <select v-model="paymentDetail.currency_code">
       <option value="USD" selected="selected">United States Dollars</option>
       <option value="EUR">Euro</option>
       <option value="GBP">United Kingdom Pounds</option>
@@ -88,7 +88,7 @@
     <br>
     <h3 style="display: inline"> ข้อมูลภาษี </h3>
     <br> &nbsp;รหัสประเภทภาษี :
-    <select name="tax_type_code">
+    <select v-model="paymentDetail.tax_type_code">
       <option value="AAA">AAA</option>
       <option value="AAB">AAB</option>
       <option value="AAC">AAC</option>
@@ -143,17 +143,17 @@
       <option value="VAT">VAT</option>
     </select>
     <br> &nbsp;อัตราภาษี :
-    <input name="tax_calculated_rate" type="number" id="tax_calculated_rate"><br> 
+    <input v-model="paymentDetail.tax_rate" type="number"><br>
     &nbsp;มูลค่าสินค้า/บริการ :
-    <input name="basis_amount" type="number" id="basis_amount"><br><br>
+    <input v-model="paymentDetail.basis_amount" type="number"><br><br>
     <h3 style="display: inline"> ข้อมูลส่วนลดหรือค่าธรรมเนียม </h3>
     <br> &nbsp;ตัวบอกส่วนลดหรือค่าธรรมเนียม :
-    <input  type="checkbox" @click="buttonIsSubmitted+=1">
+    <input v-model="paymentDetail.is_charged" type="checkbox" @click="buttonIsSubmitted+=1">
     <div v-if="buttonIsSubmitted%2===0">
       &nbsp;มูลค่าส่วนลดหรือค่าธรรมเนียม :
-      <input name="actual_amount_fee" type="number" id="actual_amount_fee">
+      <input v-model="paymentDetail.charge_amount" type="number">
       <br> &nbsp;รหัสประเภทส่วนลดหรือค่าธรรมเนียม :
-      <select name="type_code_fee">
+      <select v-model="paymentDetail.charge_type_code">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -259,7 +259,7 @@
     </div><br><br>
     <h3 style="display: inline"> ข้อมูลการชำระเงิน </h3><br>
     &nbsp;เงื่อนไขการชำระเงิน :
-    <select name="term_of_payment">
+    <select v-model="paymentDetail.payment_term_type_code">
       <option value="CREDOC">CREDOC</option>
       <option value="CREDOC/nM">CREDOC/nM</option>
       <option value="CONCREDOC">CONCREDOC</option>
@@ -293,15 +293,15 @@
     </select><br><br>
     <h3 style="display: inline"> การสรุปมูลค่าการชำระเงินทางการค้า </h3>
     <br> &nbsp;รวมมูลค่าตามเอกสารเดิม :
-    <input name="original_information_amount" type="number" id="original_information_amount">
+    <input v-model="paymentDetail.original_amount" type="number">
     <br> &nbsp;รวมมูลค่าตามรายการ/มูลค่าที่ถูกต้อง :
-    <input name="line_total_amount" type="number" id="line_total_amount">
+    <input v-model="paymentDetail.total_amount" type="number">
     <br> &nbsp;มูลค่าผลต่าง :
-    <input name="difference_sales_information_amount" type="number" id="difference_sales_information_amount">
+    <input v-model="paymentDetail.difference_sale_amount" type="number">
     <br> &nbsp;ส่วนลด :
-    <input name="total_allowance_amount" type="number" id="total_allowance_amount">
+    <input v-model="paymentDetail.total_allowance_amount" type="number">
     <br> &nbsp;จํานวนภาษีมูลค่าเพิ่ม :
-    <input name="tax_total_amount" type="number" id="tax_total_amount">
+    <input v-model="paymentDetail.total_tax_amount" type="number">
     <select name="tax_total_amount-invoice_currency_code">
       <option value="USD" selected="selected">United States Dollars</option>
       <option value="EUR">Euro</option>
@@ -384,7 +384,7 @@
       <option value="XPT">Platinum Ounces</option>
     </select>
     <br> &nbsp;ยอดเงินรวม/ยอดเงินรวมภาษีมูลค่าเพิ่ม :
-    <input name="grand_total_amount" type="number" id="grand_total_amount">
+    <input v-model="paymentDetail.grand_total_amount" type="number">
     <select name="grand_total_amount-invoice_currency_code">
       <option value="USD" selected="selected">United States Dollars</option>
       <option value="EUR">Euro</option>
@@ -471,13 +471,13 @@
 </template>
 
 <script>
-  export default {
-    name: "paymentInformation",
-    data() {
-      return {
-        buttonIsSubmitted: 1
-      };
+export default {
+  props: ['paymentDetail'],
+  data () {
+    return {
+      buttonIsSubmitted: 1
     }
-  };
+  }
+}
 
 </script>
