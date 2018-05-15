@@ -1,4 +1,4 @@
-export default{
+export default {
   data: {
     delivery_type_code: '',
     order_reference: {
@@ -10,6 +10,6 @@ export default{
       id: '',
       created_date: '',
       reference_type_code_additional: ''
-    } 
+    }
   }
 }

@@ -186,6 +186,6 @@
 <script>
 export default {
   name: 'exchangeDocumentForm',
-  props: ['exchangeDocumentFormProp'],
+  props: ['exchangeDocumentFormProp']
 }
 </script>

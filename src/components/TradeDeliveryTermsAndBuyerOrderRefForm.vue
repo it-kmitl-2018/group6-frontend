@@ -78,8 +78,8 @@ export default {
   name: 'tradeDeliveryTermsAndBuyerOrderRefForm',
   props: ['tradeDeiveryTermsAndBuyerOrderRefFormProp'],
   methods: {
-    submit: function(){
-      console.log(this.tradeDeiveryTermsAndBuyerOrderRefFormProp);
+    submit: function () {
+      console.log(this.tradeDeiveryTermsAndBuyerOrderRefFormProp)
     }
   }
 }
